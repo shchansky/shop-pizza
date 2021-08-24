@@ -1,6 +1,5 @@
 import React from 'react';
-import classNames from 'classnames'
-
+import classNames from 'classnames' 
 {/* <a href="/cart.html" className="button button--cart"/> */}
 
 

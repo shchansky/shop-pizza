@@ -24,6 +24,8 @@ export {default as Button  } from "./Button"
 export {default as Header  } from "./Header"
 export {default as CategoriesWithHooks  } from "./CategoriesWithHooks"
 export {default as CategoriesWithClass  } from "./CategoriesWithClass"
+export {default as SortPopup  } from "./SortPopup"
+
 
 
 

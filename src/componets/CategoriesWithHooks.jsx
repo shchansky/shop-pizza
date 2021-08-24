@@ -57,7 +57,14 @@ function CategoriesWithHooks({ items, ...props }) {
         <li className={activeItem === null ? "active" : ""} onClick={() => onSelectItem(null)}>Все</li>
         {
           // items.map(item => <li key={item}> {item} </li>)
-          items && items.map((item, index) => <li className={activeItem === index ? "active" : null} onClick={() => onSelectItem(index)} key={`${item}_${index}`}> {item} </li>)
+          items &&
+          items.map((item, index) => (
+            <li
+              className={activeItem === index ? "active" : null}
+              onClick={() => onSelectItem(index)}
+              key={`${item}_${index}`}>
+              {item}
+            </li>))
           //${item}_${index}______теперь item будут всегда уникальным,т.к. не будет одинаковых категорий, а index просто дополнит (уникализирует), то что будут ренедерится. Т.е. если добавить еще раз мясные то в консоле будет предупреждпение что мясные уже были и это вновь добавленный элемент списка
           //items.map((item,index) => <li onClick={ onClicItem(item) }......при каждом ренедере в консоль будут сразу выскакивать все названия элементов массива!!!! Если надо чтобы выскакивало название только при клике, тогда надо применить ф-ию обертку    <li onClick={  () => onClicItem(item)   }
           // className="active" делает кнопку с черной фоновой заливкой
